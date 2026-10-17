@@ -5,15 +5,27 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    @include for-tablet;
+
+    @include for-desktop;
+
     margin: 0 2em;
 
     &__title {
         text-align: center;
         margin-top: 2rem;
-        font-size: 1.5rem;
+        font-size: 22px;
         font-weight: 600;
         margin-bottom: 2rem;
         grid-column: span 2;
+
+        @include for-tablet {
+            grid-column: span 6;
+        };
+
+        @include for-desktop {
+            grid-column: 2 / 5;
+        }
     }
 
     &__pharagraph {
@@ -25,6 +37,13 @@
 
         &--highlight {
             font-weight: 600;
+        }
+
+        @include for-tablet {
+            grid-column: span 6;
+        }
+        @include for-desktop {
+            grid-column: 1 / 6;
         }
     }
 }
