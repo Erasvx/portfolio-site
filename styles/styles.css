@@ -115,12 +115,7 @@ table {
   font-weight: 600;
 }
 
-.main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 .main__title {
-  grid-column: span 2;
   font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
