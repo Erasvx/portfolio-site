@@ -1,0 +1,30 @@
+@use '../mixins' as *;
+
+.section {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 0 2em;
+
+    &__title {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        grid-column: span 2;
+    }
+
+    &__pharagraph {
+        line-height: 150%;
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: center;
+        grid-column: span 2;
+
+        &--highlight {
+            font-weight: 600;
+        }
+    }
+}
