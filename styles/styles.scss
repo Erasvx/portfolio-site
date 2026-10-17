@@ -1,0 +1,15 @@
+@use './blocks/reset';
+@use './blocks/_header';
+@use './blocks/_navigation';
+@use './blocks/_section';
+@use './blocks/_main';
+@use './blocks/article';
+
+html {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba($color: #494545, $alpha: 0.3);
+}
