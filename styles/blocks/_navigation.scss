@@ -31,7 +31,7 @@
     }
 
     &__link {
-        color: rgb(88, 69, 69);
+        color: var(--link-color);
         text-decoration: none;
         font-weight: 500;
         display: flex;
@@ -53,19 +53,20 @@
 
         @include for-desktop {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
+            justify-content: flex-end;
             grid-column: -4 / -1;
         }
 
         &-link {
             text-decoration: none;
             font-weight: 500;
-            color: rgb(88, 69, 69);
+            color: var(--link-color);
             transform: translateY(0);
             transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
             &:hover {
-                color: var(--link-color);
+                color: var(--link-hover-color);
                 transform: translateY(-5px);
             }
         }

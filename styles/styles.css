@@ -57,7 +57,8 @@ table {
 }
 
 :root {
-  --link-color: rgb(100, 101, 126);
+  --link-color: #e0e0e0;
+  --link-hover-color: #7c7c7c;
   --section-title-color: rgb(216, 216, 216);
   --section-pharagraph-color: rgb(179, 156, 156);
   --main-title-color: white;
@@ -101,7 +102,7 @@ table {
   }
 }
 .navigation__link {
-  color: rgb(88, 69, 69);
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 500;
   display: flex;
@@ -123,19 +124,20 @@ table {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-end;
     grid-column: -4/-1;
   }
 }
 .navigation__menu-link {
   text-decoration: none;
   font-weight: 500;
-  color: rgb(88, 69, 69);
+  color: var(--link-color);
   transform: translateY(0);
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .navigation__menu-link:hover {
-  color: var(--link-color);
+  color: var(--link-hover-color);
   transform: translateY(-5px);
 }
 .navigation__logotype {
