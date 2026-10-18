@@ -24,6 +24,7 @@
         };
 
         @include for-desktop {
+            font-size: 26px;
             grid-column: 2 / 5;
         }
     }
