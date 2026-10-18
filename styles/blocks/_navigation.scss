@@ -24,16 +24,11 @@
     }
 
     &__link {
-        color: black;
+        color: rgb(88, 69, 69);
         text-decoration: none;
         align-items: center;
         display: flex;
         font-weight: 500;
-
-        &:hover {
-            color: var(--link-color);
-            text-decoration: underline;
-        }
 
     }
 
@@ -42,5 +37,18 @@
         margin-right: 20px;
         align-items: center;
         gap: 20px;
+
+        &-link {
+            text-decoration: none;
+            font-weight: 500;
+            color: rgb(88, 69, 69);
+            transform: translateX(0);
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+            &:hover {
+                color: var(--link-color);
+                transform: translateY(-5px);
+            }
+        }
     }
 }

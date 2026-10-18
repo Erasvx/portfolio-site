@@ -1,3 +1,5 @@
+@use '../mixins' as *;
+
 .main {
 
     margin: 0 20px;
@@ -7,5 +9,13 @@
         text-align: center;
         margin-top: 2rem;
         font-weight: 700;
+
+        @include for-tablet {
+            font-size: 25px;
+        }
+
+        @include for-desktop {
+            font-size: 30px;
+        }
     }
 }
