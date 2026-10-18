@@ -1,11 +1,14 @@
 @use '../mixins' as *;
 
+@use '../variables' as *;
+
 .main {
 
     margin: 0 20px;
 
     &__title {
         font-size: 22px;
+        color: var(--main-title-color);
         text-align: center;
         margin-top: 2rem;
         font-weight: 700;

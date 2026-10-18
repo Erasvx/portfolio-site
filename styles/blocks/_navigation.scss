@@ -2,10 +2,14 @@
 @use '../mixins' as *;
 
 .navigation {
+    box-sizing: border-box;
+    align-self: center;
     font-size: 14px;
-    min-width: 100vw;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+    column-gap: 20px;
 
     @include for-tablet {
         font-size: 18px;
@@ -13,42 +17,65 @@
 
     @include for-desktop {
         font-size: 22px;
+        padding: 0 20px;
     }
 
     &__logo {
-        height: 64px;
-        width: 64px;
-        margin-left: 20px;
-        justify-content: center;
-        align-items: center;
+        height: 48px;
+        width: 48px;
+
+        @include for-desktop {
+            height: 64px;
+            width: 64px;            
+        }
     }
 
     &__link {
         color: rgb(88, 69, 69);
         text-decoration: none;
-        align-items: center;
-        display: flex;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
     }
 
     &__menu {
+        grid-column: 2 / 3;
+
         display: flex;
-        margin-right: 20px;
         align-items: center;
-        gap: 20px;
+        flex-direction: row-reverse;
+        column-gap: 10px;
+        row-gap: 5px;
+        text-align: center;
+        flex-direction: column;
+
+        @include for-desktop {
+            display: flex;
+            flex-direction: row-reverse;
+            grid-column: -4 / -1;
+        }
 
         &-link {
             text-decoration: none;
             font-weight: 500;
             color: rgb(88, 69, 69);
-            transform: translateX(0);
+            transform: translateY(0);
             transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
             &:hover {
                 color: var(--link-color);
                 transform: translateY(-5px);
             }
+        }
+    }
+
+    &__logotype {
+        display: flex;
+
+        @include for-desktop {
+            grid-column: span 2;
         }
     }
 }

@@ -1,5 +1,7 @@
 @use '../mixins' as *;
 
+@use '../variables' as *;
+
 .section {
 
     display: grid;
@@ -13,6 +15,7 @@
 
     &__title {
         text-align: center;
+        color: var(--section-title-color);
         margin-top: 2rem;
         font-size: 22px;
         font-weight: 600;
@@ -32,6 +35,7 @@
     &__pharagraph {
         line-height: 150%;
         font-weight: 400;
+        color: var(--section-pharagraph-color);
         font-size: 1.2rem;
         text-align: center;
         grid-column: span 2;
